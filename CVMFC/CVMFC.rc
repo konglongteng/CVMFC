@@ -1,0 +1,539 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CVMFC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CVMFC.ico"
+IDR_MULTIMTYPE          ICON                    "res\\CVMFCDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                        ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 CVMFC(&A)...",             ID_APP_ABOUT
+    END
+END
+
+IDR_MULTIMTYPE MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开图像",                        ID_FILE_OPEN
+        MENUITEM "恢复图像",                        ID_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "关闭当前窗口",                      ID_FILE_CLOSE
+        MENUITEM "Save As",                     ID_FILE_SAVE_AS
+        MENUITEM "保存当前位图",                      ID_CONSERVATION_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                        ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "恢复原始图像",                      ID_COLOR_IMAGE_REFRESH
+        MENUITEM "当前画面存盘",                      ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "点处理"
+    BEGIN
+        MENUITEM "彩色变灰阶",                       ID_COLOR_TO_GRAY
+        MENUITEM "图像反相",                        ID_IMAGE_INVERT
+        MENUITEM SEPARATOR
+        MENUITEM "垂直镜像",                        ID_FLIP_V
+        MENUITEM "水平镜像",                        ID_FLIP_H
+        MENUITEM "180 度旋转",                     ID_FLIP
+        MENUITEM SEPARATOR
+        MENUITEM "30 度旋转",                      ID_ROTATION_30
+        MENUITEM "仿射变换",                        ID_WARP_AFFINE
+        MENUITEM "透视变换",                        ID_WARP_PERSPECT
+        MENUITEM SEPARATOR
+        MENUITEM "亮度变换",                        ID_IMAGE_ADJUST
+        MENUITEM "灰阶图像直方图",                     ID_IMAGE_HISTOGRAM
+        MENUITEM "直方图均衡化",                      ID_HIST_EQUALIZE
+    END
+    POPUP "邻域处理"
+    BEGIN
+        MENUITEM "邻域平均",                        ID_BLUR_SMOOTH
+        MENUITEM "Gauss 滤波",                    ID_GAUSS_SMOOTH
+        MENUITEM "中值滤波",                        ID_MEDIAN_SMOOTH
+        MENUITEM SEPARATOR
+        MENUITEM "Sobel 边缘检测",                  ID_SOBEL
+        MENUITEM "Laplace 边缘检测",                ID_LAPLACE
+    END
+    POPUP "二值化"
+    BEGIN
+        MENUITEM "选择阈值",                        ID_THRESHOLDING_1
+        MENUITEM "选择阈值 (ESC)",                  ID_THRESHOLDING_2
+        MENUITEM SEPARATOR
+        MENUITEM "自适应阈值法",                      ID_ADAPTIVE_THRESHOLD
+        MENUITEM SEPARATOR
+        MENUITEM "基本全局阈值法 (*)",                 ID_BASIC_GLOBAL_THRESHOLD
+    END
+    POPUP "二值图像处理"
+    BEGIN
+        MENUITEM "点集最小区域 (ESC)",                ID_MIN_AREA_RECT_2
+        MENUITEM "外接矩形 (单)",                    ID_AREA_RECT
+        MENUITEM "最小面积矩形 (单)",                  ID_MIN_AREA_RECT
+        MENUITEM "多边形逼近 (单)",                   ID_APPROX_POLY
+        MENUITEM SEPARATOR
+        MENUITEM "点集凸包 (ESC)",                  ID_CONVEX_HULL_2
+        MENUITEM "点集凸包 (事件驱动)",                 ID_CONVEX_HULL
+        MENUITEM "区域凸包 (单)",                    ID_AREA_CONVEX_HULL
+        MENUITEM "区域凹差 (单)",                    ID_CONVEXITY_DEFECTS
+        MENUITEM SEPARATOR
+        MENUITEM "轮廓跟踪",                        ID_CONTOUR_TRACK
+        MENUITEM "距离变换",                        ID_DISTANCE
+    END
+    POPUP "形态学处理"
+    BEGIN
+        MENUITEM "腐蚀",                          ID_EROSION
+        MENUITEM "膨胀",                          ID_DILATION
+        MENUITEM "开运算",                         ID_OPENNING
+        MENUITEM "闭运算",                         ID_CLOSING
+        MENUITEM "形态学梯度",                       ID_GRADS
+        MENUITEM SEPARATOR
+        MENUITEM "顶帽变换",                        ID_GRAY_TOPHAT
+        MENUITEM "波谷检测",                        ID_GRAY_BLACKHAT
+    END
+    POPUP "彩色图像处理"
+    BEGIN
+        MENUITEM "RGB 分量",                      ID_IMAGE_RGB
+        MENUITEM "HSV 分量",                      ID_IMAGE_HSV
+        MENUITEM "Lab 分量",                      ID_IMAGE_LAB
+        MENUITEM SEPARATOR
+        MENUITEM "RGB 分量 (C)",                  ID_IMAGE_RGB_C
+        MENUITEM "XYZ 分量",                      ID_IMAGE_XYZ
+        MENUITEM "YCrCb 分量",                    ID_IMAGE_YCRCB
+        MENUITEM "Luv 分量",                      ID_IMAGE_LUV
+        MENUITEM SEPARATOR
+        MENUITEM "二维直方图",                       ID_2D_HISTOGRAM
+        MENUITEM SEPARATOR
+        MENUITEM "邻域平均",                        ID_BLUR_SMOOTH_C
+        MENUITEM "Gauss 滤波",                    ID_GAUSS_SMOOTH_C
+        MENUITEM "中值滤波",                        ID_MEDIAN_SMOOTH_C
+        MENUITEM SEPARATOR
+        MENUITEM "Sobel 边缘检测",                  ID_SOBEL_C
+        MENUITEM "Laplace 边缘检测",                ID_LAPLACE_C
+    END
+    POPUP "综合处理例"
+    BEGIN
+        MENUITEM "图像缩小",                        ID_IMAGE_SHRINK
+        MENUITEM "径向梯度",                        ID_RADIAL_GRADS
+        MENUITEM SEPARATOR
+        MENUITEM "Canny 算法",                    ID_CANNY_BORDDETEC
+        MENUITEM "Hough 变换 (直线)",               ID_HOUGH_LINES
+        MENUITEM "Hough 变换 (圆)",                ID_HOUGH_CIRCLE
+        MENUITEM "平行四边形检测",                     ID_SQUARES_TEST
+        MENUITEM SEPARATOR
+        MENUITEM "连通区域填充 (ESC)",                ID_FLOOD_FILL
+        MENUITEM "金字塔法图像分割",                    ID_PYR_SEGMENTATION
+        MENUITEM SEPARATOR
+        MENUITEM "椭圆曲线拟合",                      ID_FIT_ELLIPSE
+        MENUITEM "Snake 原理 (ESC)",              ID_SNAKE
+        MENUITEM "分水岭原理 (ESC)",                 ID_WATERSHED
+        MENUITEM "角点检测",                        ID_CORNERS_TEST
+        MENUITEM SEPARATOR
+        MENUITEM "点集聚类 (ESC)",                  ID_CLUSTERS
+        MENUITEM "分割二维点集 (ESC)",                ID_SEQ_PARTITION
+        MENUITEM "旋转点跟踪 (ESC)",                 ID_ROTATION_TRACK
+        MENUITEM "人脸检测",                        ID_FACE_DETECT
+    END
+    POPUP "动态检测"
+    BEGIN
+        MENUITEM "动态边缘检测 (ESC)",                ID_DYNAMIC_BORDER_TEST
+        MENUITEM SEPARATOR
+        MENUITEM "L_K 算法光流跟踪 (ESC)",            ID_OPTICAL_FLOW_TRACK
+        MENUITEM "背景建模检测 (ESC)",                IF_FOREGROUND_DETECT
+        MENUITEM "运动目标检测 (ESC)",                ID_MOTION_DETECT
+        MENUITEM "彩色目标跟踪 (ESC)",                ID_CAM_SHIFT_DEMO
+        MENUITEM "人脸检测二 (ESC)",                 ID_FACE_DETECT_2
+    END
+    POPUP "视频采集播放"
+    BEGIN
+        MENUITEM "启动摄像头 (DS)",                  ID_START_CAPTURE
+        MENUITEM "打开 AVI 文件 (CV)",              ID_OPEN_AVI_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "视频解冻",                        ID_VIEW_CONTINUE
+        MENUITEM "视频冻结",                        ID_CAPTURE_IMAGE
+        MENUITEM "多图像平均",                       ID_AVERAGE_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "关闭视频",                        ID_CAP_ABORT
+        MENUITEM SEPARATOR
+        MENUITEM "选择采样分辨率",                     ID_SET_PARAMETER
+    END
+    POPUP "图形及其他"
+    BEGIN
+        MENUITEM "绘制图形",                        ID_DRAWING
+        MENUITEM "绘制 Delaunay 图形",              ID_DELAUNAY
+        MENUITEM SEPARATOR
+        MENUITEM "极坐标变换",                       ID_LOG_POLAR
+        MENUITEM "DFT",                         ID_DFT
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "层叠(&C)",                      ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                      ID_WINDOW_TILE_HORZ
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 CVMFC(&A)...",             ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 59
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CVMFC"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CVMFC 1.1 版",IDC_STATIC,40,13,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C)  2010.10",IDC_STATIC,39,38,119,8
+    DEFPUSHBUTTON   "确定",IDOK,171,34,50,14,WS_GROUP
+    LTEXT           "陆宗骐 编制",IDC_STATIC,174,14,49,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "CVMFC Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CVMFC"
+            VALUE "LegalCopyright", "版权所有 (C) 2009"
+            VALUE "OriginalFilename", "CVMFC.EXE"
+            VALUE "ProductName", "CVMFC 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "OpenCV 图像处理入门"
+    IDR_MULTIMTYPE          "\nCVMFC\nCVMFC\n\n\nCVMFC.Document\nMultIm Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "OpenCV 图像处理入门"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "为活动文档打开另一个窗口\n新建窗口"
+    ID_WINDOW_ARRANGE       "将图标排列在窗口底部\n排列图标"
+    ID_WINDOW_CASCADE       "排列窗口成相互重叠\n层叠窗口"
+    ID_WINDOW_TILE_HORZ     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_TILE_VERT     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+    AFX_IDS_MDICHILD        "激活该窗口"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CVMFC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
